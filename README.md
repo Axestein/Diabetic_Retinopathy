@@ -8,6 +8,8 @@
 
 This repository contains the implementation for a deep learning-based system to automatically detect and grade Diabetic Retinopathy (DR) severity from retinal fundus images. The project addresses the critical need for accessible and efficient DR screening, especially in regions with a shortage of ophthalmologists. Using transfer learning on the ResNet50 architecture and a novel two-phase training protocol with inverse-frequency class weighting, our model achieves clinically competitive performance (QWK 0.907) on the APTOS 2019 dataset using a single consumer-grade GPU.
 
+<img width="1000" height="400" alt="Minor Project_Ctech PPT Template pptx" src="https://github.com/user-attachments/assets/7adf81ce-3eff-42d5-9fe7-82a39bb61d90" />
+
 **Project Guide:** Dr. Gokulakrishnan D.  
 **Institution:** School of Computing, SRM Institute of Science and Technology, Chennai  
 **Team:** Aditya Kumar Singh, Sameer Yadav
@@ -73,6 +75,8 @@ The dataset is highly imbalanced, motivating our class-weighting strategy.
 
 The architecture follows a standard but highly optimized machine learning pipeline.
 
+<img width="790" height="420" alt="image" src="https://github.com/user-attachments/assets/f7c3b210-29d4-4eda-8673-e41b338f7627" />
+
 ### 1. Data Pipeline
 - **Preprocessing:** Resize to `320x320` (higher than standard `224x224` to preserve microaneurysm details), normalize pixels to [0,1].
 - **Augmentation (on-the-fly):**
@@ -113,6 +117,8 @@ The model was evaluated on a held-out test set, achieving robust performance acr
 | **Validation QWK** | **0.907** (Almost Perfect Agreement) |
 | **Test-Set QWK** | 0.901 |
 | **Full-Corpus QWK** | 0.926 |
+
+<img width="1370" height="604" alt="image" src="https://github.com/user-attachments/assets/987a0bbf-503c-4f3d-99f4-db0562915c83" />
 
 ### Per-Class Performance (Validation Set)
 | Grade | Precision | Recall | F1-Score | Support |
